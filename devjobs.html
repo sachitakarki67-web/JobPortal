@@ -3,68 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev jobs</title>
+    <title>Developer Job</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="devboard.css" />
+    <!-- <link rel="stylesheet" href="devboard.css" /> -->
   </head>
   <body>
-    <!-- navbar-expand-lg= collapses nav to hamburger icon below 932px -->
-    <!-- bg-white= background-white -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <!-- navbar-expand-lg= collapses nav to hamburger below 932px -->
+      <!-- bg-white=> background white -->
+      <!-- sticky-top=> sticky nav top 0 -->
       <div class="container">
-        <a href="#" class="navbar-brand fw-bold"
-          >Dev <span class="text-accent">Board</span></a
-        >
-        <!-- text-accent=custom class -->
-        <!-- navbar-brand=> styles logo or site name and removes underline -->
+        <a href="#" class="navbar-brand fw-bold">
+          Dev<span class="text-accent">Board</span>
+        </a>
+        <!-- navbar-brand= styles the logo or site name and removes the underline -->
+        <!-- fw-bold= font-weight fold -->
 
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- navbar-toggler=> hamburger icon -->
-        <!-- data-bs-toggle= tells bootstrap js toggle visibility -->
-        <!-- data-bs-target= tells which element to show or hide -->
 
+        <!-- navbar-toggler= this is hamburger menu -->
+        <!-- data-bs-toggle=tell bootstrap js for toggle visibility -->
+        <!-- data-bs-menu= tells which element to target -->
         <div class="collapse navbar-collapse" id="navMenu">
           <div class="ms-auto">
-            <a href="#" class="btn btn-accent rounded-pill px-4 fw-semibold"
-              >Post a Job</a
-            >
+            <a href="#" class="btn btn-accent rounded-pill fw-semibold px-4">
+              Post a job
+            </a>
+            <!-- btn-accent= our custom class -->
+            <!-- rounded-pill= border-radius 999px -->
+            <!-- px-4= padding left and padding right 1.5rem -->
           </div>
         </div>
+        <!-- navMenu= used for targeting -->
+        <!-- navbar-collapse=marks it as a collapsable part of the navbar -->
       </div>
     </nav>
     <!-- end of navbar -->
+
     <header class="py-5 text-center page-header">
+      <!-- py-5=padding top and padding bottom -->
       <div class="container">
         <span
-          class="badge rounded-pill bg-accent-subtle text-black-50 px-3 py-2 mb-3"
-          >24 roles open</span
+          class="badge rounded-pill bg-accent-subtle text-accent px-3 py-2 mb-3"
         >
-        <h1 class="fw-bold display-6 mb-2">Find Your Next Role</h1>
+          24 roles open</span
+        >
+        <!-- badge=bootstrap class for badge -->
+        <!-- bg-accent-subtle and text-accent=our custom class -->
+        <!-- mb-3=margin bottom -->
+
+        <h1 class="display-6" fw-bold mb-2>Find Your Next Role</h1>
+        <!-- display-6= bootstrap large scale heading even bigger than h1 -->
         <p class="text-muted mb-0" style="max-width: 400px; margin: 0 auto">
-          Curated Jobs for Developer
+          Curated jobs for developer
         </p>
+        <!-- text-muted= bootstrap default grey color -->
       </div>
     </header>
-    <!-- py-5=> padding top and bottom 3 rem -->
-    <!-- page-header=> our custom class -->
-
-    <!-- End of Header.............................. -->
-
+    <!-- end header -->
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
+          <!-- row= flex grid container direction row -->
+          <!-- g-4=> sets the gap between columns and row as 1.5rem -->
           <div class="col-md-4">
             <div class="card border-0 shadow-sm h-100 job-card">
               <div class="card-body d-flex flex-column gap-3 p-4">
@@ -74,9 +90,43 @@
                     class="badge bg-success-subtle text-success rounded-pill"
                     >Remote</span
                   >
+                  <!-- bg-success-subtle=> boostrap light green color -->
                 </div>
                 <h5 class="fw-semibold mb-0">Frontend Engineer</h5>
-                <p class="text-muted small mb-0">$120k - $150k / year</p>
+                <p class="text-muted small mb-0">90k$ - 130k$ /year</p>
+                <a
+                  href="#"
+                  class="btn btn-accent rounded-pill mt-auto w-100 fw-semibold"
+                  >Apply Now</a
+                >
+              </div>
+              <!-- card-body=> boostrap class for content inside card -->
+              <!-- d-flex=> display flex -->
+              <!-- flex-column=> flex-direction column -->
+              <!-- gap-3=> gap 1 rem -->
+              <!-- p-4=> padding 1.5 rem -->
+            </div>
+            <!-- job-card=our custom class -->
+            <!-- card= bootstrap class for card layout -->
+            <!-- border-0=> removes deafult bootstrap grey border -->
+            <!-- shadow-sm= implements small box-shadow -->
+            <!-- h-100=>sets the card height to 100% -->
+          </div>
+          <!-- col= column  md is for mid screen 768pixels or higher and 4 represents 4 of 12 columns -->
+          <!-- End of card 1................................... -->
+
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100 job-card">
+              <div class="card-body d-flex flex-column gap-3 p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibod text-muted small">Vercel</span>
+                  <span
+                    class="badge bg-warning-subtle text-warning rounded-pill"
+                    >Hybrid</span
+                  >
+                </div>
+                <h5 class="fw-semibold mb-0">Backend Developer</h5>
+                <p class="text-muted small mb-0">150k$ - 250k$ / year</p>
                 <a
                   href="#"
                   class="btn btn-accent rounded-pill mt-auto w-100 fw-semibold"
@@ -84,13 +134,38 @@
                 >
               </div>
             </div>
-            <!-- job-card= custom class and card= class for bootstrap card -->
           </div>
-          <!-- end of card 1.................................................... -->
-          <!-- col=column md=for screen of 768px or below 4= 4 of 12 columns -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100 job-card">
+              <div class="card-body d-flex flex-column gap-3 p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold text-muted small">Netflix</span>
+                  <!--
+                   bg-secondary-subtle + text-secondary → Bootstrap's grey badge pair.
+                 -->
+                  <span
+                    class="badge bg-secondary-subtle text-secondary rounded-pill"
+                    >On-site</span
+                  >
+                </div>
+
+                <h5 class="fw-semibold mb-0">Data Scientist</h5>
+                <p class="text-muted small mb-0">$110k – $160k / year</p>
+                <a
+                  href="#"
+                  class="btn btn-accent rounded-pill mt-auto w-100 fw-semibold"
+                  >Apply Now</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- row=> display flex and g-4= sets the gap 1.5rem -->
       </div>
     </section>
+    <!-- End Cards..................... -->
+    <footer class="border-top py-4 text-center">
+      <span class="text-muted small">@2026 Job Board. Built by ISMT DEV</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
